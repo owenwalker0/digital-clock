@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<style>
+body{background:#020617;color:#38bdf8;font-family:Arial;display:grid;place-items:center;min-height:100vh;margin:0}
+main{text-align:center;background:#0f172a;padding:40px;border-radius:20px;width:min(80%,600px);box-shadow:0 0 40px #0369a144}
+#clock{font-size:clamp(30px,8vw,75px);font-weight:bold;margin:30px 0}
+#date{color:#cbd5e1;font-size:20px}
+button{background:#0284c7;color:white;border:0;padding:13px 20px;border-radius:8px;cursor:pointer}
+</style>
+</head>
+<body>
+<main>
+<h1>Digital Clock</h1>
+<p>Your real-time digital companion.</p>
+<div id="clock"></div>
+<p id="date"></p>
+<button onclick="toggleFormat()">Switch 12/24 Hour</button>
+</main>
+<script>
+let twelveHour=true;
+function updateClock(){
+ const now=new Date();
+ document.getElementById("clock").textContent=
+ now.toLocaleTimeString("en-US",{hour12:twelveHour});
+ document.getElementById("date").textContent=
+ now.toLocaleDateString("en-US",{
+  weekday:"long",
+  year:"numeric",
+  month:"long",
+  day:"numeric"
+ });
+}
+function toggleFormat(){
+ twelveHour=!twelveHour;
+ updateClock();
+}
+setInterval(updateClock,1000);
+updateClock();
+</script>
+</body>
+</html>
