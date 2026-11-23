@@ -1,23 +1,22 @@
-# Digital Clock
+## Clock Features
 
-A responsive digital clock displaying local time.
+The digital clock provides a convenient
+way to view the current local time.
 
-## Features
+### Main Features
 
-- Real-time clock
-- Current date
-- 12-hour and 24-hour formats
+- Real-time clock display
+- Current date information
+- Automatic time updates
+- Simple user interface
 
-## How to Use
+### Usage
 
-Open the application and select your preferred time format.
+Open the application in a web browser
+to view the current time.
 
-## Technologies
+### Development Notes
 
-- HTML
-- CSS
-- JavaScript
-
-## Running Locally
-
-Open `index.html` in a modern web browser.
+- Keep the time display readable.
+- Maintain consistent formatting.
+- Ensure the interface works on mobile screens.
