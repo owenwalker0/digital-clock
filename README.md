@@ -20,3 +20,12 @@ to view the current time.
 - Keep the time display readable.
 - Maintain consistent formatting.
 - Ensure the interface works on mobile screens.
+## Manual Testing Checklist
+
+- [ ] Check that the displayed time updates without refreshing.
+- [ ] Compare the date and time with the device clock.
+- [ ] Review clock readability at mobile screen widths.
+
+### Test Notes
+
+Record the observed result and any reproducible issue after running the tests.
